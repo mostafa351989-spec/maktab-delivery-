@@ -6,7 +6,7 @@ export default function OrderForm() {
     customer_name: '',
     phone: '',
     address: '',
-    notes: ''
+    ''
   })
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
@@ -26,7 +26,7 @@ export default function OrderForm() {
     setLoading(false)
     if (!error) {
       setSuccess(true)
-      setForm({ customer_name: '', phone: '', address: '', notes: '' })
+      setForm({ customer_name: '', phone: '', address: '', '' })
       setTimeout(() => setSuccess(false), 3000)
     } else {
       alert('حصل خطأ: ' + error.message)
@@ -148,8 +148,7 @@ export default function OrderForm() {
               ملاحظات إضافية
             </label>
             <textarea
-              value={form.notes}
-              onChange={(e) => setForm({...form, notes: e.target.value})}
+              onChange={(e) => setForm({...form, e.target.value})}
               rows="2"
               placeholder="اختياري"
               style={{
