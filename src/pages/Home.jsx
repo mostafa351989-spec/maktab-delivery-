@@ -26,7 +26,7 @@ export default function Home() {
             مكتب التوصيل السريع 📦
           </h1>
           <p style={{ fontSize: '20px', opacity: 0.95, marginBottom: '40px' }}>
-            أسرع خدمة توصيل في الإسكندرية - طلبك يوصل في أقل من 60 دقيقة
+            خدمة توصيل سريعة وموثوقة - نضمن وصول طلبك بأمان وفي الوقت المناسب
           </p>
           <Link to="/order" style={{ textDecoration: 'none' }}>
             <button style={{
@@ -127,7 +127,7 @@ export default function Home() {
                 fontSize: '35px'
               }}>⚡</div>
               <h3 style={{ color: '#111', marginBottom: '10px' }}>سرعة فائقة</h3>
-              <p style={{ color: '#666' }}>طلبك يوصل في أقل من ساعة داخل الإسكندرية</p>
+              <p style={{ color: '#666' }}>نغطي مناطق واسعة مع التزام كامل بالمواعيد</p>
             </div>
             <div>
               <div style={{ 
