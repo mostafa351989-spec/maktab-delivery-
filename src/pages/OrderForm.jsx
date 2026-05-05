@@ -5,8 +5,7 @@ export default function OrderForm() {
   const [form, setForm] = useState({
     customer_name: '',
     phone: '',
-    address: '',
-    ''
+    address: ''
   })
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
@@ -26,7 +25,7 @@ export default function OrderForm() {
     setLoading(false)
     if (!error) {
       setSuccess(true)
-      setForm({ customer_name: '', phone: '', address: '', '' })
+      setForm({ customer_name: '', phone: '', address: '' })
       setTimeout(() => setSuccess(false), 3000)
     } else {
       alert('حصل خطأ: ' + error.message)
@@ -90,11 +89,8 @@ export default function OrderForm() {
                 border: '2px solid #e5e7eb',
                 borderRadius: '10px',
                 fontSize: '16px',
-                outline: 'none',
-                transition: '0.3s'
+                outline: 'none'
               }}
-              onFocus={(e) => e.target.style.borderColor = '#3b82f6'}
-              onBlur={(e) => e.target.style.borderColor = '#e5e7eb'}
             />
           </div>
 
@@ -115,12 +111,10 @@ export default function OrderForm() {
                 fontSize: '16px',
                 outline: 'none'
               }}
-              onFocus={(e) => e.target.style.borderColor = '#3b82f6'}
-              onBlur={(e) => e.target.style.borderColor = '#e5e7eb'}
             />
           </div>
 
-          <div style={{ marginBottom: '20px' }}>
+          <div style={{ marginBottom: '25px' }}>
             <label style={{ display: 'block', marginBottom: '8px', color: '#333', fontWeight: 'bold' }}>
               العنوان بالتفصيل
             </label>
@@ -138,30 +132,6 @@ export default function OrderForm() {
                 outline: 'none',
                 resize: 'none'
               }}
-              onFocus={(e) => e.target.style.borderColor = '#3b82f6'}
-              onBlur={(e) => e.target.style.borderColor = '#e5e7eb'}
-            />
-          </div>
-
-          <div style={{ marginBottom: '25px' }}>
-            <label style={{ display: 'block', marginBottom: '8px', color: '#333', fontWeight: 'bold' }}>
-              ملاحظات إضافية
-            </label>
-            <textarea
-              onChange={(e) => setForm({...form, e.target.value})}
-              rows="2"
-              placeholder="اختياري"
-              style={{
-                width: '100%',
-                padding: '12px',
-                border: '2px solid #e5e7eb',
-                borderRadius: '10px',
-                fontSize: '16px',
-                outline: 'none',
-                resize: 'none'
-              }}
-              onFocus={(e) => e.target.style.borderColor = '#3b82f6'}
-              onBlur={(e) => e.target.style.borderColor = '#e5e7eb'}
             />
           </div>
 
@@ -177,8 +147,7 @@ export default function OrderForm() {
               borderRadius: '10px',
               fontSize: '18px',
               fontWeight: 'bold',
-              cursor: loading ? 'not-allowed' : 'pointer',
-              transition: '0.3s'
+              cursor: loading ? 'not-allowed' : 'pointer'
             }}
           >
             {loading ? 'جاري التسجيل...' : 'تسجيل الطلب 🚀'}
